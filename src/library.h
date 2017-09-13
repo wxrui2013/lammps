@@ -11,12 +11,16 @@
    See the README file in the top-level LAMMPS directory.
 ------------------------------------------------------------------------- */
 
+#ifndef LMP_LIBRARY_H
+#define LMP_LIBRARY_H
+
 /*
    C or Fortran style library interface to LAMMPS
    new LAMMPS-specific functions can be added
 */
 
 #include <mpi.h>
+#include "lmpconfig.h"
 
 /* ifdefs allow this file to be included in a C program */
 
@@ -87,3 +91,4 @@ are not consecutively numbered, or if no atom map is defined.  See the
 atom_modify command for details about atom maps.
 
 */
+#endif /* LMP_LIBRARY_H */

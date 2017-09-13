@@ -40,6 +40,8 @@
 #include <stdint.h>
 #include <inttypes.h>
 
+#include "lmpconfig.h"
+
 // grrr - IBM Power6 does not provide this def in their system header files
 
 #ifndef PRId64
