@@ -19,7 +19,7 @@ cat > ${tmpfile} <<EOF
 #define LMPCONFIG_H
 
 #if defined(LAMMPS_SMALLSMALL) || defined(LAMMPS_BIGBIG) || defined(LAMMPS_SMALLBIG)
-#error "please use 'make config' to set integer size. don't define in makefile"
+#warning "please use 'make config' to set integer size. don't define in makefile"
 #endif
 EOF
 
