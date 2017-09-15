@@ -20,7 +20,7 @@ cat > ${tmpfile} <<EOF
 
 #if defined(LAMMPS_SMALLSMALL) || defined(LAMMPS_BIGBIG) || defined(LAMMPS_SMALLBIG)
 #warning "please use 'make config' to set integer size. don't define in makefile"
-#endif
+#else
 EOF
 
 # use default settings
@@ -62,5 +62,6 @@ EOF
 fi
 
 echo "#define ${intsize}" >> ${tmpfile}
+echo '#endif' >> ${tmpfile}
 echo '#endif' >> ${tmpfile}
 mv ${tmpfile} lmpconfig.h
